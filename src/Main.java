@@ -1,30 +1,46 @@
 
-
-
 public class Main {
-
-
     public static void main(String[] args) {
-        int[] arr = {1, 4, 3, 5, 8, 34, 11, 13};
-        printOddNumbers(arr);
+        String[] roles = {"Городничий",
+                "Аммос Федорович",
+                "Артемий Филиппович",
+                "Лука Лукич"};
+        String[] textLines = {"Городничий: Я пригласил вас, господа, с тем, чтобы" +
+                " сообщить вам пренеприятное известие: к нам едет ревизор.",
+                "Аммос Федорович: Как ревизор?",
+                "Артемий Филиппович: Как ревизор?",
+                "Городничий: Ревизор из Петербурга, инкогнито. И еще с секретным предписаньем.",
+                "Аммос Федорович: Вот те на!",
+                "Артемий Филиппович: Вот не было заботы, так подай!",
+                "Лука Лукич: Господи боже! еще и с секретным предписаньем!",
+                "Лука: Господи боже! еще и с секретным предписаньем!",
+                "Лука Лукич: Господи боже! еще и с секретным предписаньем! Лука Лукич:",
+                "Лука Лукич: "};
 
+
+        printTextPerRole(roles, textLines);
     }
 
-    public static void printOddNumbers(int[] arr) {
+    public static String printTextPerRole(String[] roles, String[] textLines) {
+        StringBuilder a1 = new StringBuilder();
+        String[] textLines2=new String[textLines.length];
 
-        StringBuilder abс = new StringBuilder();
+        String a="1";
+
+        for (String role : roles) {
+            for (String line : textLines) {
+                if (line.contains(role)) {
+
+                    System.out.println(line);;
+                }
 
 
-
-        for (int i = 0; i < arr.length; i++) {
-
-            if (arr[i] % 2 != 0) {
-                abс.append(arr[i] + ",");
+                }
             }
+
+
+             return a;
+
+
         }
-
-        System.out.println(abс.deleteCharAt(abс.length()-1));
     }
-
-}
-
